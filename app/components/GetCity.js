@@ -18,6 +18,7 @@ function InputField(props) {
     <input
       className="form-control"
       onChange={props.onUpdateCity}
+      style={{margin: 10}}
       placeholder="Anywhere, USA"
       type="text"
       value={props.city} />
