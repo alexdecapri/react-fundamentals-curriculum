@@ -5,8 +5,7 @@ var styles = require('../styles');
 var Home = React.createClass({
   render: function() {
     return (
-      <div style={styles.fullHeight}>
-        <div style={styles.homeContainer} className="text-center">
+        <div style={styles.homeContainer} className="text-center main-container">
           <h1 style={styles.homeHeader}>
             Enter a City and State
           </h1>
@@ -21,7 +20,6 @@ var Home = React.createClass({
               Get Weather
           </button>
         </div>
-      </div>
 
     )
   }
