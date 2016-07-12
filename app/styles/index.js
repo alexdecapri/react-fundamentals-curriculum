@@ -1,4 +1,7 @@
 var styles = {
+  fullHeight: {
+    height: '100%'
+  },
   homeContainer: {
     backgroundImage: "url('app/images/pattern.svg')",
     backgroundSize: "cover",
@@ -6,8 +9,7 @@ var styles = {
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
-    width: '100%',
-    height: '100%'
+    width: '100%'
   },
   homeHeader: {
     color: '#fff',
@@ -15,7 +17,7 @@ var styles = {
     fontweight: 100
   },
   homeInput: {
-    maxWidth: '300px',
+    maxWidth: '220px',
     marginTop: '20px',
     marginBottom: '20px'
   },
