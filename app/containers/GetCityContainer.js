@@ -1,6 +1,7 @@
 var React = require('react');
 var PropTypes = React.PropTypes;
 var GetCity = require('../components/GetCity');
+var helpers = require('../helpers/api');
 
 var GetCityContainer = React.createClass({
   getDefaultProps: function() {
@@ -8,16 +9,20 @@ var GetCityContainer = React.createClass({
       direction: 'column'
     }
   },
-  // propTypes: {
-  //   direction: PropTypes.string
-  // },
+  propTypes: {
+    direction: PropTypes.string
+  },
   getInitialState: function() {
     return {
       city: ''
     }
   },
   handleSubmitCity: function() {
-    console.log(this.state.city);
+    console.log('original console.log', this.state.city);
+    helpers.getWeatherTest(this.state.city)
+      .then(function(data) {
+        console.log('API received', data);
+      })
   },
   handleUpdateCity: function(e) {
     this.setState({
