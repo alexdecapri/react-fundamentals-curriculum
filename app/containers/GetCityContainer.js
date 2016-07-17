@@ -19,7 +19,7 @@ var GetCityContainer = React.createClass({
   },
   handleSubmitCity: function() {
     console.log('original console.log', this.state.city);
-    helpers.getWeatherTest(this.state.city)
+    helpers.getFiveDay(this.state.city)
       .then(function(data) {
         console.log('API received', data);
       })
