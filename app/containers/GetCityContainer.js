@@ -12,17 +12,23 @@ var GetCityContainer = React.createClass({
   propTypes: {
     direction: PropTypes.string
   },
+  contextTypes: {
+    router: PropTypes.object.isRequired
+  }, //need this for this.context.router.push to work below
   getInitialState: function() {
     return {
       city: ''
     }
   },
-  handleSubmitCity: function() {
-    console.log('original console.log', this.state.city);
-    helpers.getFiveDay(this.state.city)
-      .then(function(data) {
-        console.log('API received', data);
-      })
+  handleSubmitCity: function(e) {
+    e.preventDefault();
+    console.log('this.state.city:', this.state.city);
+    // helpers.getFiveDay(this.state.city)
+    //   .then(function(data) {
+    //     console.log('API received', data);
+    //   })
+    console.log(this);
+    this.context.router.push('/forecast/' + this.state.city);
   },
   handleUpdateCity: function(e) {
     this.setState({
