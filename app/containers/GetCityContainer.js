@@ -22,12 +22,12 @@ var GetCityContainer = React.createClass({
   },
   handleSubmitCity: function(e) {
     e.preventDefault();
-    console.log('this.state.city:', this.state.city);
+    // console.log('this.state.city:', this.state.city);
     // helpers.getFiveDay(this.state.city)
     //   .then(function(data) {
     //     console.log('API received', data);
     //   })
-    console.log(this);
+    // console.log(this);
     this.context.router.push('/forecast/' + this.state.city);
   },
   handleUpdateCity: function(e) {

@@ -1,9 +1,10 @@
 var React = require('react');
 
 function Forecast(props) {
-  return(
-    <div>Forecast View</div>
-  )
+  console.log(props)
+  return props.isLoading === true
+    ? <div>Loading</div>
+    : <div>Forecast View</div>
 }
 
 module.exports = Forecast;

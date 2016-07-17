@@ -16,7 +16,7 @@ var helpers = {
   getFiveDay: function(city) {
     return axios.get(baseUrl + 'forecast/daily?q=' + city + '&appid=' + apiKey + '&cnt=5')
       .then(function(response) {
-        return response.data.list;
+        return response.data;
       }).catch(function(err) {
         console.log(err);
       })
